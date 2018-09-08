@@ -1,30 +1,53 @@
 <!DOCTYPE html>
-<title>Nootflix & Chill</title>
-<body>
-<h1 class="stylo" onclick="about()"><img src="https://avatars0.githubusercontent.com/u/41908212?s=200&v=4"></img></h1>
-<p class="text">Looks like this page isn't finished yet :(, if you have any experience in web development, head over to the 
-  <a href="https://github.com/ThePStar7/nootflix">Main Repository</a> or the <a href="https://github.com/Nootflix/nootflix.github.io">Repository of this website</a> </p>
-</body>
-<style>
-  .text {
-  color: white;
-  }
-  
-  .stylo {
-  color: red;
-  }
-  .stylo:hover {
-  color: darkred;
-  }
-  body {
-  background-color: black;
-  }
-</style>
-<script>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>NootFlix Refresh</title>
+      <div class="results"></div>
+    </head>
+    <body>
 
-  function about() {
-  
-  alert("Nootflix is a FOSS Netflix alternative, written by PStar7\n DMCA Notice: The owner of this site wants to indicate that on the servers of nootflix.github.io there is no copyright protected content stored. All offered files are stored on external file hosts that are in no way associated with Nootflix. If you are a rights holder of a file listed here, do not contact us, but the providers on whose servers any copyrighted material is stored. Nootflix offers, acting like a search engine, only links to files and not the files themself, this is the reason why the owners of this website are not responsible and according to Teleservices Act also can not be held liable. We dissociate ourselves from the contents and have no influence on it. Nootflix is merely a facilitator of external content, for legally protected content the providers hosting this content (filehosters) are responsible. We ourselves have no way to delete these files and do not post any links to external content here - this is done by volunteers who are not in contact with the Nootflix administration. To remove copyright protected content and to enforce your copyrights, please directly contact the companies storing these files on their servers. The operators of this website have no knowledge of copyright infringement caused by the links published by third parties, as the checking of external content is in no way reasonable, due to numerous new entries per day.")
+	<style>
+	body {
+	background-color: rgb(60, 60, 60);
+	}
+.infobtn {
+	border: none;
+	background-color: darkgrey;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 150%;
+  background-color: darkgrey;
+    color: white;
+    text-align: left;
+}
+.txtbox {
+  width: 15%;
+  margin-bottom: 2px;
+}
+</style>
+</head>
+<body>
+<h1>GUI not implemented yet, if you want one you can go to <a href="https://cine.to">Cine.to (German Site)</a></h1>
+<form id="form" onsubmit="return false;">
+<input class="txtbox" type="text" id="moviename" placeholder="Name of the movie"> <br> <input class="txtbox" type="text" id="movieyear" placeholder="Year">
+<button type="submit" onclick="blackmagic()">Search!</button>
+</form>
+<div class="footer">
+ <button type="button" class="infobtn">NootFlix Refresh Canary Build v0.1</button><button type="button" class="infobtn" onclick="about()">About</button>
+</div>
+<script>
+  function blackmagic() {
+    var name = document.getElementById("moviename").value;
+    var year = document.getElementById("movieyear").value;
+    window.location.href = "https://api.odb.to/embed?title="+name+"&year="+year;
   }
-  
+function about() {
+	alert('Cool Stuff', 'About')
+}
 </script>
+    </body>
+  </html>
