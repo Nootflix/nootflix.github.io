@@ -1,4 +1,4 @@
-# This is the source code of the website http://nootflix.ml/ which is aimed to be a replacement for Netflix (thats why the Name "Nootflix") <br>
+# This is the source code of the website http://nootflix.pstar7.gq which is aimed to be a replacement for Netflix (thats why the Name "Nootflix") <br>
 Whats working: <br>
 - 
 
